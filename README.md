@@ -1,40 +1,28 @@
-# is-it-odd
-Is it odd? Powered by OpenAI
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Is it odd?
 
-## Creating a project
+A brand new way to determine whether a number is odd or not.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Powered by OpenAI
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+*Cutting edge*
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Usage
 
-## Developing
+Run for development
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+```ts
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Create production version
 
-To create a production version of your app:
-
-```bash
+```ts
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview production version with `npm run preview`
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Showcase
+
+![Image from the page](/img/screenshot.png)
