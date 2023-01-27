@@ -1,6 +1,7 @@
 import { json, type RequestHandler } from '@sveltejs/kit';
 import { Configuration, OpenAIApi } from 'openai';
 import { OPENAI_API_KEY } from '$env/static/private';
+
 export const POST = (async ({ request }) => {
   const { prompt } = await request.json();
   let result = '';
