@@ -29,4 +29,6 @@ Preview production version with `npm run preview`
 
 ## Showcase
 
+Available at [https://is-it-odd.vercel.app/](https://is-it-odd.vercel.app/)
+
 ![Image from the page](/img/screenshot.png)

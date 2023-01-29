@@ -4,6 +4,9 @@
 	let error: String = '';
 	let loading: boolean = false;
 
+	// An effort to match the case of applying the 'green' class to the result div
+	const positive = ['yes', 'is an']
+
 	type PromptResponse = {
 		result: string;
 	};
@@ -36,15 +39,15 @@
 
 <div class="container">
 	<h1 class="title">Is it odd?</h1>
-	<input type="number" bind:value={input} placeholder="Number" />
-	<button on:click={check}>Check</button>
+	<input type="number" bind:value={input} placeholder="Number" class="number-input" />
+	<button on:click={check} class="check-button">Check</button>
 
 	{#if loading}
 		<div class="loading">
 			<p>Evaluating...</p>
 		</div>
 	{:else if result}
-		<div class={result.toLowerCase().includes('yes') ? 'result-green' : 'result-red'}>
+		<div class={positive.some(el => result.toLowerCase().includes(el)) ? 'result-green' : 'result-red'}>
 			<p>{result}</p>
 		</div>
 	{:else if error}
@@ -53,7 +56,7 @@
 		</div>
 	{/if}
 
-	<p>Results are provided by OpenAI's <span>code-davinci-002</span></p>
+	<p>Results are provided by OpenAI's <span class="code-block">code-davinci-002</span></p>
 </div>
 
 <style>
@@ -84,6 +87,7 @@
 		font-size: 2em;
 		font-weight: 600;
 		margin: 0.5em;
+		font-family: 'Roboto Mono', monospace;
 	}
 
 	.result-green {
@@ -116,12 +120,12 @@
 		text-align: center;
 	}
 
-	span {
+	.code-block {
 		font-size: 1em;
 		font-family: 'Roboto Mono', monospace;
 	}
 
-	input {
+	.number-input {
 		padding: 0.5em;
 		margin: 0.5em;
 		font-size: 1em;
@@ -130,7 +134,7 @@
 		text-align: center;
 	}
 
-	button {
+	.check-button {
 		padding: 0.5em 1em;
 		margin: 0.5em;
 		background-color: white;
@@ -140,7 +144,7 @@
 		cursor: pointer;
 	}
 
-	button:hover {
+	.check-button:hover {
 		background-color: #f0f0f0;
 	}
 </style>
