@@ -56,7 +56,7 @@
 		</div>
 	{/if}
 
-	<p>Results are provided by OpenAI's <span class="code-block">code-davinci-002</span></p>
+	<p>Built with <span class="code-block"><a href="https://github.com/transitive-bullshit/chatgpt-api">ChatGPT API</a></span></p>
 </div>
 
 <style>
@@ -120,9 +120,11 @@
 		text-align: center;
 	}
 
-	.code-block {
+	.code-block a {
 		font-size: 1em;
 		font-family: 'Roboto Mono', monospace;
+		color: black;
+		text-decoration: none;
 	}
 
 	.number-input {
