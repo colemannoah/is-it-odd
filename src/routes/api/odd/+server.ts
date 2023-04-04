@@ -22,7 +22,7 @@ export const POST = (async ({ request }) => {
 
   const completion = await openai.createCompletion({
     model: 'text-davinci-002',
-    prompt: `Is ${prompt} an odd number?`
+    prompt: `Is ${prompt} an odd number?`,
   });
 
   result = completion.data.choices[0].text as string;
