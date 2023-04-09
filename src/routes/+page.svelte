@@ -57,6 +57,8 @@
 	{/if}
 
 	<p>Results are provided by OpenAI's <span class="code-block">code-davinci-002</span></p>
+	<!-- lmao -->
+	<p><strong>My free trial usage for my OpenAI key has run out.. So this doesn't work (for now)</strong></p>
 </div>
 
 <style>

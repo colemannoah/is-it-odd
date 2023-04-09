@@ -20,11 +20,14 @@ export const POST = (async ({ request }) => {
 
 	const openai = new OpenAIApi(config);
 
+  
   const completion = await openai.createCompletion({
-    model: 'text-davinci-002',
+    model: 'text-davinci-003',
     prompt: `Is ${prompt} an odd number?`,
+    temperature: 0.5,
+    max_tokens: 1,  
   });
-
+  
   result = completion.data.choices[0].text as string;
 
   return json({ result });
